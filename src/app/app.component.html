@@ -1,0 +1,30 @@
+<h1>Hello{{title}}</h1>
+<h1>1+1={{sum(1,1)}}</h1>
+<button class="{{classStr}}">按钮</button>
+<h1 [attr.data-index] = "msg">这是一个msg</h1>
+<!--样式的三种写法-->
+<h1 class={{classStr}}>class</h1>
+<h1 [class]="classStr">class1</h1>
+<h1 [attr.class]="classStr">class2</h1>
+<!--普通写法-->
+<h1 class="bgBlue">class3</h1>
+
+<!--true起作用，false不起作用-->
+<h1 [class]="classObj">class4</h1>
+
+<!--数组-->
+<h1 [class]="['bgBlue','active','abc']" >class5</h1>
+<h1 [class]="classArr" >class6</h1>
+<h1 [style]="styleStr">class7</h1>
+<h1 [style]="styleObj">class8</h1>
+<h1 [style.background]="styleColor">class9</h1> <!--这里编译器 style.  没有提示-->
+<h1 [style.width.px]="widthNum">class10</h1> <!--这里编译器 style.  没有提示-->
+
+<!--小括号绑定事件-->
+<button (click)="changeColor()">改变颜色</button>
+<button (click)="changeButton($event)">改变颜色</button>
+
+
+
+
+
