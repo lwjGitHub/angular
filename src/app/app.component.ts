@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'chapter02';
+/*
+
   classStr = 'bgBlue';
   classObj = {
     bgBlue : false,
@@ -23,9 +25,9 @@ export class AppComponent {
   msg = 'this is mag';
   widthNum = 200;
   flag = false;
-  /*
+  /!*
   * 函数
-  * */
+  * *!/
   changeColor(): void
   {
       this.styleObj = {
@@ -44,17 +46,54 @@ export class AppComponent {
       }
     this.flag = !this.flag;
   }
- /* sum(a: number , b: number): number
+ /!* sum(a: number , b: number): number
   {
     return a + b;
-  }*/
+  }*!/
   // tslint:disable-next-line:typedef
   sum(x, y)
   {
     return x + y;
   }
+*/
+/*条件渲染*/
+/* person = '美国';
+ nameArr = ['lwj', 'mfg', 'sk'];
+ colors = [ 'red', 'blue', 'yellow', 'green' ];
+ students = [
+   {
+      name: 'lwj',
+      age: 29,
+      hobby: 'fuck fg'
+   },
+   {
+     name: 'mfg',
+     age: 22,
+     hobby: 'fuck sk'
+   }
+   ];
+  workState = '工作1';
+  orderState = 1;
 
+ togglePerson(): void
+ {
+   this.person = this.person === '巴西' ? '美国' : '巴西';
+ }
+ public choosePerson(people: string, i: number): void
+ {
+    alert(`I like ${i} ` + people); /!*` 不是‘*!/
+ }*/
 
-
-
+  username = 'root';
+  password = '123';
+  entity1 =  {
+    name: '123',
+    age: 48
+  };
+  time1 = new Date();
+  clickLogin(username: string, password: string): void
+  {
+    console.log(username);
+    console.log(password);
+  }
 }
