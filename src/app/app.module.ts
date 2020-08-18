@@ -4,10 +4,12 @@ import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NewsComponent } from './news/news.component';
+import { LUpperCasePipe } from './filter/l-upper-case.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    NewsComponent
+    NewsComponent,
+    LUpperCasePipe
   ],
   imports: [
     BrowserModule,

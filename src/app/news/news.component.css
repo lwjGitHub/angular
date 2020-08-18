@@ -1,0 +1,14 @@
+/*只作用于当前组件*/
+h1
+{
+  background-color: lavender;
+  color: rgb(110, 5, 119);
+}
+.bgBlue
+{
+  background-color: skyblue;
+}
+.active
+{
+  background-color: hotpink;
+}

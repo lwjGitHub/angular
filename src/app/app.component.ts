@@ -84,7 +84,8 @@ export class AppComponent {
     alert(`I like ${i} ` + people); /!*` 不是‘*!/
  }*/
 
-  username = 'root';
+/* ngModel
+ username = 'root';
   password = '123';
   entity1 =  {
     name: '123',
@@ -97,4 +98,18 @@ export class AppComponent {
     console.log(username);
     console.log(password);
   }
+  */
+
+
+ msg = 'Test';
+ sendToNews = '跨组件传递数据，父到子';
+ sendToNews1 = '跨组件传递数据，父到子';
+
+ // 子传父
+ getNewsMsg = '';
+ getNewsEvent(event: any): void
+ {
+    console.log(event);
+    this.getNewsMsg = event.msg;
+ }
 }

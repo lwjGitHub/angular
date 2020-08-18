@@ -2,28 +2,28 @@
 <!--<h1>1+1={{sum(1,1)}}</h1>
 <button class="{{classStr}}">按钮</button>
 <h1 [attr.data-index] = "msg">这是一个msg</h1>
-&lt;!&ndash;样式的三种写法&ndash;&gt;
+<!--样式的三种写法
 <h1 class={{classStr}}>class</h1>
 <h1 [class]="classStr">class1</h1>
-<h1 [attr.class]="classStr">class2</h1>
-&lt;!&ndash;普通写法&ndash;&gt;
+<h1 [attr.class]="classStr">class2</h1>-->
+<!--普通写法
 <h1 class="bgBlue">class3</h1>
-
-&lt;!&ndash;true起作用，false不起作用&ndash;&gt;
+-->
+<!--true起作用，false不起作用
 <h1 [class]="classObj">class4</h1>
-
-&lt;!&ndash;数组&ndash;&gt;
+-->
+<!--数组
 <h1 [class]="['bgBlue','active','abc']" >class5</h1>
 <h1 [class]="classArr" >class6</h1>
 <h1 [style]="styleStr">class7</h1>
 <h1 [style]="styleObj">class8</h1>
 <h1 [style.background]="styleColor">class9</h1> &lt;!&ndash;这里编译器 style.  没有提示&ndash;&gt;
 <h1 [style.width.px]="widthNum">class10</h1> &lt;!&ndash;这里编译器 style.  没有提示&ndash;&gt;
-
-&lt;!&ndash;小括号绑定事件&ndash;&gt;
+-->
+<!--小括号绑定事件
 <button (click)="changeColor()">改变颜色</button>
-<button (click)="changeButton($event)">改变颜色</button>-->
-
+<button (click)="changeButton($event)">改变颜色</button>
+-->
 <!--条件渲染-->
 <!--
 <div *ngIf="person=='美国'">
@@ -77,7 +77,8 @@
 </div>
 -->
 
-<!--ngModel获取-->
+<!-- ngModel -->
+<!--ngModel获取
 <div>
   <label for = "">用户名: </label>
   <input type="text" [(ngModel)]="username">
@@ -89,20 +90,31 @@
 </div>
 <h1>用户名:{{username|uppercase}}</h1>
 <h1>密码:{{password}}</h1>
-<!--通过临时变量获取-->
+-->
+<!--通过临时变量获取 标签对象化 input1和input2表示input对象
 <div>
   <label for = "">用户名: </label>
-  <input #input1 type="text"> <!--标签对象化-->
+  <input #input1 type="text"> 
 </div>
+
 <div>
   <label for = "">密 码: </label>
   <input #input2 type="text">
   <br>
-  <button (click)="clickLogin(input1.value,input2.value)">登录</button><!--input1和input2表示input对象-->
+  <button (click)="clickLogin(input1.value,input2.value)">登录</button>
 </div>
 <h1>用户名:{{username}}</h1>
 <h1>密码:{{password}}</h1>
-<!--"|"管道-->
+-->
+<!--"|"管道
 <h1>{{username|json}}</h1>
 <h1>{{entity1|json}}</h1>
 <h1>{{time1|date:"yyyy/MM/dd HH:mm:ss"}}</h1>
+-->
+
+<!--自定义管道 -->
+<h1>{{msg|lUpperCase}}</h1>
+<!--父子组件数据传递-->
+<app-news [item]='sendToNews' [item1]='sendToNews1' (newsMsg)="getNewsEvent($event)">
+</app-news>
+<h1>子组件发来的信息：{{getNewsMsg}}</h1>
