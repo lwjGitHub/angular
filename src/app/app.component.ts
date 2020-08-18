@@ -91,6 +91,7 @@ export class AppComponent {
     age: 48
   };
   time1 = new Date();
+  msg = 'test';
   clickLogin(username: string, password: string): void
   {
     console.log(username);
